@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Quản lý VietCad</title>
+    <title><?php echo $title;?></title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport' />
     <!--[if lt IE 9]>
     <script src='<?php echo base_url('public/')?>assets/javascripts/html5shiv.js' type='text/javascript'></script>
