@@ -16,10 +16,12 @@ Class User extends CI_Controller {
     
     // Show login page
     public function index() {
-        $this->load->view('home/home_v');
+        $data['subview']='home/home_v';
+        $this->load->view('layout/home_layout',$data);
     }
     public function login(){
-        $this->load->view('home/user_login_v');
+        $data['subview']='home/user_login_v';
+        $this->load->view('layout/home_layout',$data);
     }
     
 }
