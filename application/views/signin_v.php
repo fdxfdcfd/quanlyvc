@@ -53,29 +53,61 @@
     <!-- / demo -->
     <link href='<?php echo base_url('public/')?>assets/stylesheets/demo.css' media='all' rel='stylesheet' type='text/css' />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
-<body class='sign-in contrast-background'>
+<body class='sign-in blue-background'>
 <div id='wrapper'>
     <div class='application'>
         <div class='application-content'>
-            <a href="sign_in.html"><div class='icon-heart'></div>
-                <span>Flatty</span>
+            <a href="sign_in.html">
+                <span>VietCAD</span>
             </a>
         </div>
     </div>
     <div class='controls'>
         <div class='caret'></div>
         <div class='form-wrapper'>
-            <h1 class='text-center'>Sign in</h1>
-            <form accept-charset="UTF-8" action="index.html" method="get" /><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+            
+            <h1 class='text-center'>Đăng nhập</h1>
+            <small class="text-red"><?php echo validation_errors(); ?></small>
+            <?php
+                echo form_open('Auth/user_login_process', 'id="myform"');
+            ?>
+            <div style="margin:0;padding:0;display:inline">
+            <input name="utf8" type="hidden" value="&#x2713;" /></div>
                 <div class='row-fluid'>
                     <div class='span12 icon-over-input'>
-                        <input class="span12" id="email" name="email" placeholder="E-mail" type="text" value="" />
+                        <?php
+                            $data= array(
+                            'name'          => 'userid',
+                            'id'            => 'userid',
+                            'value'         => '',
+                            'maxlength'     => '100',
+                            'size'          => '50',
+                            'placeholder'   => 'Tên đăng nhập',
+                            'class'         => 'span12',
+                            'value'         => set_value('userid')
+                            );
+
+                            echo form_input($data);
+                            
+                        ?>
                         <i class='icon-user muted'></i>
                     </div>
                 </div>
                 <div class='row-fluid'>
                     <div class='span12 icon-over-input'>
-                        <input class="span12" id="password" name="password" placeholder="Password" type="password" value="" />
+                        <?php
+                            $data= array(
+                            'name'          => 'password',
+                            'id'            => 'password',
+                            'value'         => '',
+                            'maxlength'     => '100',
+                            'size'          => '50',
+                            'placeholder'   => 'Mật khẩu',
+                            'class'         => 'span12'
+                            );
+
+                            echo form_input($data);
+                        ?>
                         <i class='icon-lock muted'></i>
                     </div>
                 </div>
@@ -86,15 +118,9 @@
             </form>
             <div class='text-center'>
                 <hr class='hr-normal' />
-                <a href="forgot_password.html">Forgot your password?</a>
+                <a href="forgot_password.html">Quên mật khẩu?</a>
             </div>
         </div>
-    </div>
-    <div class='login-action text-center'>
-        <a href="sign_up.html"><i class='icon-user'></i>
-            New to Flatty?
-            <strong>Sign up</strong>
-        </a>
     </div>
 </div>
 <!-- / jquery -->

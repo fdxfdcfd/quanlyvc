@@ -3,28 +3,27 @@
         <div class='navbar-inner'>
             <div class='container-fluid'>
                 <a class='brand' href='index.html'>
-                    <i class='icon-heart-empty'></i>
-                    <span class='hidden-phone'>Flatty</span>
+                    <span class='hidden-phone'>VietCAD</span>
                 </a>
                 <a class='toggle-nav btn pull-left' href='#'>
                     <i class='icon-reorder'></i>
                 </a>
                 <ul class='nav pull-right'>
                     <li class='dropdown light only-icon'>
-                        <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                        <a  style="display: none"class='dropdown-toggle' data-toggle='dropdown' href='#'>
                             <i class='icon-adjust'></i>
                         </a>
                         <ul class='dropdown-menu color-settings'>
                             <li class='color-settings-body-color'>
                                 <div class='color-title'>Body color</div>
-                                <a data-change-to='assets/stylesheets/light-theme.css' href='#'>
+                                <a data-change-to='<?php echo base_url('public/')?>assets/stylesheets/light-theme.css' href='#'>
                                     Light
                                     <small>(default)</small>
                                 </a>
-                                <a data-change-to='assets/stylesheets/dark-theme.css' href='#'>
+                                <a data-change-to='<?php echo base_url('public/')?>assets/stylesheets/dark-theme.css' href='#'>
                                     Dark
                                 </a>
-                                <a data-change-to='assets/stylesheets/dark-blue-theme.css' href='#'>
+                                <a data-change-to='<?php echo base_url('public/')?>assets/stylesheets/dark-blue-theme.css' href='#'>
                                     Dark blue
                                 </a>
                             </li>

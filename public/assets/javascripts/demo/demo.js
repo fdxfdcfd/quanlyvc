@@ -87,12 +87,10 @@
         });
         $("#slider-example2-amount").text("$" + $("#slider-example2").slider("values", 0) + " - $" + $("#slider-example2").slider("values", 1));
         $("#alert-example").click(function() {
-            return bootbox.dialog("This is alert!", [
-                {
-                    label: "Okay",
-                    "class": "btn-danger"
-                }
-            ]);
+            return bootbox.dialog("This is alert!", [{
+                label: "Okay",
+                "class": "btn-danger"
+            }]);
         });
         $("#notification1").click(function() {
             return $.jGrowl("Lorem ipsum dolor sit amet...");
@@ -275,100 +273,96 @@
                     return $(this).remove();
                 }
             },
-            events: [
-                {
-                    id: "event1",
-                    title: "All Day Event",
-                    start: new Date(y, m, 1),
-                    className: 'event-orange'
-                }, {
-                    id: "event2",
-                    title: "Long Event",
-                    start: new Date(y, m, d - 5),
-                    end: new Date(y, m, d - 2),
-                    className: "event-red"
-                }, {
-                    id: 999,
-                    id: "event3",
-                    title: "Repeating Event",
-                    start: new Date(y, m, d - 3, 16, 0),
-                    allDay: false,
-                    className: "event-blue"
-                }, {
-                    id: 999,
-                    id: "event3",
-                    title: "Repeating Event",
-                    start: new Date(y, m, d + 4, 16, 0),
-                    allDay: false,
-                    className: "event-green"
-                }, {
-                    id: "event4",
-                    title: "Meeting",
-                    start: new Date(y, m, d, 10, 30),
-                    allDay: false,
-                    className: "event-orange"
-                }, {
-                    id: "event5",
-                    title: "Lunch",
-                    start: new Date(y, m, d, 12, 0),
-                    end: new Date(y, m, d, 14, 0),
-                    allDay: false,
-                    className: "event-red"
-                }, {
-                    id: "event6",
-                    title: "Birthday Party",
-                    start: new Date(y, m, d + 1, 19, 0),
-                    end: new Date(y, m, d + 1, 22, 30),
-                    allDay: false,
-                    className: "event-purple"
-                }
-            ]
+            events: [{
+                id: "event1",
+                title: "All Day Event",
+                start: new Date(y, m, 1),
+                className: 'event-orange'
+            }, {
+                id: "event2",
+                title: "Long Event",
+                start: new Date(y, m, d - 5),
+                end: new Date(y, m, d - 2),
+                className: "event-red"
+            }, {
+                id: 999,
+                id: "event3",
+                title: "Repeating Event",
+                start: new Date(y, m, d - 3, 16, 0),
+                allDay: false,
+                className: "event-blue"
+            }, {
+                id: 999,
+                id: "event3",
+                title: "Repeating Event",
+                start: new Date(y, m, d + 4, 16, 0),
+                allDay: false,
+                className: "event-green"
+            }, {
+                id: "event4",
+                title: "Meeting",
+                start: new Date(y, m, d, 10, 30),
+                allDay: false,
+                className: "event-orange"
+            }, {
+                id: "event5",
+                title: "Lunch",
+                start: new Date(y, m, d, 12, 0),
+                end: new Date(y, m, d, 14, 0),
+                allDay: false,
+                className: "event-red"
+            }, {
+                id: "event6",
+                title: "Birthday Party",
+                start: new Date(y, m, d + 1, 19, 0),
+                end: new Date(y, m, d + 1, 22, 30),
+                allDay: false,
+                className: "event-purple"
+            }]
         });
         if ($(".mention").length > 0) {
             $(".mention").mention({
-                users: [
-                    {
-                        name: "Lindsay Made",
-                        username: "LindsayM",
-                        image: "http://placekitten.com/25/25"
-                    }, {
-                        name: "Rob Dyrdek",
-                        username: "robdyrdek",
-                        image: "http://placekitten.com/25/24"
-                    }, {
-                        name: "Rick Bahner",
-                        username: "RickyBahner",
-                        image: "http://placekitten.com/25/23"
-                    }, {
-                        name: "Jacob Kelley",
-                        username: "jakiestfu",
-                        image: "http://placekitten.com/25/22"
-                    }, {
-                        name: "John Doe",
-                        username: "HackMurphy",
-                        image: "http://placekitten.com/25/21"
-                    }, {
-                        name: "Charlie Edmiston",
-                        username: "charlie",
-                        image: "http://placekitten.com/25/20"
-                    }, {
-                        name: "Andrea Montoya",
-                        username: "andream",
-                        image: "http://placekitten.com/24/20"
-                    }, {
-                        name: "Jenna Talbert",
-                        username: "calisunshine",
-                        image: "http://placekitten.com/23/20"
-                    }, {
-                        name: "Street League",
-                        username: "streetleague",
-                        image: "http://placekitten.com/22/20"
-                    }, {
-                        name: "Loud Mouth Burrito",
-                        username: "Loudmouthfoods",
-                        image: "http://placekitten.com/21/20"
-                    }
-                ]
+                users: [{
+                    name: "Lindsay Made",
+                    username: "LindsayM",
+                    image: "http://placekitten.com/25/25"
+                }, {
+                    name: "Rob Dyrdek",
+                    username: "robdyrdek",
+                    image: "http://placekitten.com/25/24"
+                }, {
+                    name: "Rick Bahner",
+                    username: "RickyBahner",
+                    image: "http://placekitten.com/25/23"
+                }, {
+                    name: "Jacob Kelley",
+                    username: "jakiestfu",
+                    image: "http://placekitten.com/25/22"
+                }, {
+                    name: "John Doe",
+                    username: "HackMurphy",
+                    image: "http://placekitten.com/25/21"
+                }, {
+                    name: "Charlie Edmiston",
+                    username: "charlie",
+                    image: "http://placekitten.com/25/20"
+                }, {
+                    name: "Andrea Montoya",
+                    username: "andream",
+                    image: "http://placekitten.com/24/20"
+                }, {
+                    name: "Jenna Talbert",
+                    username: "calisunshine",
+                    image: "http://placekitten.com/23/20"
+                }, {
+                    name: "Street League",
+                    username: "streetleague",
+                    image: "http://placekitten.com/22/20"
+                }, {
+                    name: "Loud Mouth Burrito",
+                    username: "Loudmouthfoods",
+                    image: "http://placekitten.com/21/20"
+                }]
             });
         }
         $("#daterange2").daterangepicker({

@@ -74,12 +74,12 @@
         <div class='row-fluid' id='content-wrapper'>
             <div class='span12'>
             <?php 
-              if(isset($subpages)){
-	foreach ($subpages as $key => $value) {
-		$this->load->view($value);
-	}
-}
-?>
+                if(isset($subpages)){
+                    foreach ($subpages as $key => $value) {
+                        $this->load->view($value);
+                    }
+                }
+            ?>
             </div>
         </div>
     </div>
