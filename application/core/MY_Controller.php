@@ -21,7 +21,8 @@ class MY_Controller extends CI_Controller {
         
         $this->check_signin();
         // Load database
-        $this->load->model('user');
+        $this->load->model('User');
+
         $this->data['title']="Quản lý VietCad";
         // Xu ly controller
         $controller = $this->uri->segment(1);
@@ -59,8 +60,8 @@ class MY_Controller extends CI_Controller {
 
     
     public function check_signin(){
-        if($this->session->userdata('userid')==null)
-        {   
+        if(!$this->session->has_userdata('userid'))
+        {  
             if ($this->uri->segment(2) != 'signin' && $this->uri->segment(1) != 'Auth')
              redirect('Main/signin', 'refresh');
         }

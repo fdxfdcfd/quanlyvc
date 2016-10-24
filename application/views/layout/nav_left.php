@@ -1,6 +1,6 @@
 <ul class='nav nav-stacked'>
 <li class=''>
-    <a href='index.html'>
+    <a href='<?php echo base_url('Main');?>'>
         <i class='icon-dashboard'></i>
         <span>Dashboard</span>
     </a>

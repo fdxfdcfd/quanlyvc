@@ -159,7 +159,7 @@
                     <li class='dropdown dark user-menu'>
                         <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
                             <img alt='Mila Kunis' height='23' src='<?php echo base_url('public/')?>assets/images/avatar.jpg' width='23' />
-                            <span class='user-name hidden-phone'>Mila Kunis</span>
+                            <span class='user-name hidden-phone'><?=$this->session->userid?></span>
                             <b class='caret'></b>
                         </a>
                         <ul class='dropdown-menu'>
@@ -177,7 +177,7 @@
                             </li>
                             <li class='divider'></li>
                             <li>
-                                <a href='sign_in.html'>
+                                <a href='Auth/signout'>
                                     <i class='icon-signout'></i>
                                     Sign out
                                 </a>
