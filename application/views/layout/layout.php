@@ -83,12 +83,12 @@ mixpanel.init("4f8393fc06b020c22fedadfec430ad83");</script><!-- end Mixpanel -->
         <div class='row-fluid' id='content-wrapper'>
             <div class='span12'>
             <?php 
-              if(isset($subpages)){
-	foreach ($subpages as $key => $value) {
-		$this->load->view($value);
-	}
-}
-?>
+                if(isset($subpages)){
+                    foreach ($subpages as $key => $value) {
+                        $this->load->view($value);
+                    }
+                }
+            ?>
             </div>
         </div>
     </div>

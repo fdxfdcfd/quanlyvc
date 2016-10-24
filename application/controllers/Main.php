@@ -3,8 +3,8 @@ class Main extends MY_Controller {
 
         public function index()
         {
-            $data['subpages']= array('dashboard_v');
-            $this->load->view('layout/layout',$data);
+            $this->data['subpages']= array('dashboard_v');
+            $this->load->view('layout/layout',$this->data);
         }
         public function SignIn()
         {
