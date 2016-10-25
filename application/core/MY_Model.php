@@ -1,14 +1,19 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class MY_Model extends CI_Model {
+
+     public function __construct() 
+     {
+           parent::__construct(); 
+           $this->load->database();
+     }
     // Ten table
     public $table = '';
     public function Create($table,$data)
     {
 
     }
-    public function read($table,$where){
-        if(isset($id)) return false;
-        $this->db->select('*');
+    public function read($table,$where=array()){
+        $this->db->select();
         $this->db->from($table);
         $this->db->where($where);
         $result = $this->db->get();
