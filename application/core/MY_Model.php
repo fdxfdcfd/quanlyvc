@@ -10,7 +10,7 @@ class MY_Model extends CI_Model {
     public $table = '';
     public function Create($table,$data)
     {
-
+            
     }
     public function read($table,$where=array()){
         $this->db->select();
